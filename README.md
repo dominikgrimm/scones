@@ -64,5 +64,5 @@ The second parameter is a options cell array (optional - default values are spec
 
 ## Contact 
 
-Any questions can be directed to Chloe-Agathe Azencott: chloe-agathe.azencott@mines-paristech.fr
+Any questions can be directed to Chloe-Agathe Azencott: chloe-agathe.azencott [at] mines-paristech.fr
 
