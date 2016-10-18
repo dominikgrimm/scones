@@ -39,33 +39,39 @@ demo()
 Demo files are provided in the `data` folder.
 
 
-## SConES:
+## Running SConES for given values of the lambda and eta parameters
+`[indicators, objectives] = scones(data, option)`
 
-
+### Input:
 To run SConES two parameters are needed. The first one is a data cell array:
 
 * `data.X` is the genotype data 
 * `data.Y` is the phenotype  
 * `data.W` is the sparse network  
-* `data.selected_PCs` is the number of principle components that should be used for population structure correction  
+* `data.selected_PCs` is the number of principal components that should be used for population structure correction  
 * `data.lambda_values` is a vector of size `1 x k` with `k` values for `lambda`  
 * `data.eta_values` is a vector of size `1 x h` with `h` values for `eta`  
-
 
 The second parameter is a options cell array (optional - default values are specified):
 
 * `options.automatic` : if this parameter is true `data.lambda_values` and `data.eta_values` are determined automatically (default: `true`)  
 * `options.number_parameters` : this parameters specifices the number of eta and lambda values in the case `options.automatic` is set to true (default: `10`)  
 * `options.stdout` : if this parameter is true output is printed into the terminal window (default: `true`)  
-* `options.nfold` : if `scones_crossvalidation` is called this parameter specifices the number of folds (default: `10`)  
-* `options.seed` : if `scones_crossvalidation` is called this parameter specifies a seed for splitting the data (default: 0)  
 
 ### Output: 
 
 * indicators = indicator matrix of size `n x k x h`, where `n` is the length of vector `c`, `k` the length of vector `lambda_values` and `h` the length of vector `eta_values`
 * objectives = matrix with all objective values with size `k x h` for the grid of `lambda x eta` values
 
+## Using an inner cross-validation to determine the best values of the lambda and eta parameters
+`[indicators, objectives] = scones_crossvalidation(data, option)`
 
+### Input:
+The first parameter (`data`) is the same as described above.
+
+The second parameter (`options`) can additionally take the following values:
+* `options.nfold` : if `scones_crossvalidation` is called this parameter specifices the number of folds (default: `10`)  
+* `options.seed` : if `scones_crossvalidation` is called this parameter specifies a seed for splitting the data (default: 0)  
 
 ## Contact 
 
