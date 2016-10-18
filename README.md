@@ -10,12 +10,15 @@ MATLAB code implementing the method described in:
 > C.-A. Azencott, D. Grimm, M. Sugiyama, Y. Kawahara and K. Borgwardt (2013) 
 > **Efficient network-guided multi-locus association mapping with graph cuts**,  _Bioinformatics_ 29 (13), i171-i179  [doi:10.1093/bioinformatics/btt238](http://bioinformatics.oxfordjournals.org/content/29/13/i171)
 
-SConES has been integrated to [EasyGWAS](https://github.com/dominikgrimm/easyGWASCore), a framework for the analysis and meta-analysis of GWAS data. In particular, this offers a Python interface. 
+### Related work and repositories
 
-Regarding the feature selection part (i.e. after the GWAS data has been processed and the SNP scored), [sfan](https://github.com/chagaz/sfan) uses a different (faster) maxflow solver, is written in Python, and also incorporates the multi-task version proposed in 
+* **EasyGWAS**: SConES has been integrated to [EasyGWAS](https://github.com/dominikgrimm/easyGWASCore), a framework for the analysis and meta-analysis of GWAS data. In particular, this offers a Python interface. 
+
+* **sfan**: Regarding the feature selection part (i.e. after the GWAS data has been processed and the SNP scored), [sfan](https://github.com/chagaz/sfan) uses a different (faster) maxflow solver, is written in Python, and also incorporates the multi-task version proposed in 
 > M. Sugiyama, C.-A. Azencott, D. Grimm, Y. Kawahara and K. Borgwardt (2014)
 > **Multi-task feature selection on multiple networks via maximum flows**, _SIAM ICDM_, 199-207 [doi:10.1137/1.9781611973440.23](http://epubs.siam.org/doi/abs/10.1137/1.9781611973440.23)
 
+* **MultiSConeS**: For the original version of this multi-task version, see [Multi-SConES](https://github.com/mahito-sugiyama/Multi-SConES).
 
 
 ## Demo:
